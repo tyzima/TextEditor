@@ -1,0 +1,315 @@
+@import 'tailwindcss/base';
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #3ECF8E; /* This is the default color for blue-500 in Tailwind */
+  --primary-color-50: rgba(62, 207, 142, 0.5); /* This is the 50% opacity version */
+  --primary-color-dark: #2EA36A; /* This is a darker shade of the primary color */
+}
+
+@font-face {
+  font-family: 'UnitedSansCond-Heavy';
+  src: url('https://www.lax.ink/open_types/UnitedSansCond-Heavy.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UnitedSansCond-Light';
+  src: url('https://www.lax.ink/open_types/UnitedSansCond-Light.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UnitedSansCond-Medium';
+  src: url('https://www.lax.ink/open_types/UnitedSansCond-Medium.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UnitedSansCond-Bold';
+  src: url('https://www.lax.ink/open_types/UnitedSansCond-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UnitedSansCond-Black';
+  src: url('https://www.lax.ink/open_types/UnitedSansCond-Black.otf') format('opentype');
+  font-display: swap;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 0.6s infinite;
+}
+
+.shadow-md {
+  border-radius: 8px;
+ box-shadow: 0 0 0 .5px #0000001a inset,2px 2px 8px #00000006;
+}
+
+.md\:flex-row > .w-full > .shadow-inner{
+  min-height:573px;
+ }
+ 
+
+.ease-in-out .space-y-4 .grid{
+  grid-template-columns:22% 22% 48%;
+ }
+ 
+ /* Overflow auto */
+ .min-h-screen .flex-col .flex .flex-col .overflow-y-auto{
+  grid-template-columns:20% 20% 50%;
+ }
+ 
+ 
+ 
+/* Text */
+.space-y-4 .justify-center:nth-child(3) .text-lg{
+ position:relative;
+ left:8px;
+}
+
+/* Span Tag */
+.items-end .justify-end span{
+  font-size:8px;
+  font-weight:700;
+ }
+ 
+ 
+/* Add this at the end of your index.css file */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-sun {
+  animation: rotate 10s linear infinite;
+}
+
+
+
+.ease-in-out .space-y-4 .grid{
+  grid-template-columns:22% 22% 48%;
+ }
+ 
+ /* Overflow auto */
+ .min-h-screen .flex-col .flex .flex-col .overflow-y-auto{
+  grid-template-columns:20% 20% 50%;
+ }
+ 
+ 
+ 
+/* Text */
+.space-y-4 .justify-center:nth-child(3) .text-lg{
+ position:relative;
+ left:8px;
+}
+
+/* Span Tag */
+.items-end .justify-end span{
+  font-size:8px;
+  font-weight:700;
+ }
+ 
+ 
+ /* Label */
+.space-y-4 .flex label{
+  color:rgba(55,65,81,0.46);
+ }
+ 
+ /* Label */
+ .space-y-4 .grid label{
+  color:rgba(55,65,81,0.46);
+ }
+ 
+ .min-h-screen .justify-between .md\:flex-row{
+  font-size:12px;
+ }
+ 
+ /* Input */
+ .min-h-screen .justify-between input[type=text]{
+  min-width:187px;
+ }
+ 
+ @media (max-width:601px){
+
+  /* Lucide mail */
+  .min-h-screen .relative .lucide-mail{
+   display:none;
+  }
+  
+ }
+
+
+ /* Overflow hidden */
+.space-y-4 .flex .overflow-hidden {
+  background-image: linear-gradient(to right, #f3f4f6 0%, #ffffff 50%, #f3f4f6 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.space-y-4 .flex .overflow-hidden:hover {
+  background-image: linear-gradient(to right, #eef2ff 0%, #ffffff 50%, #eef2ff 100%);
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.1);
+}
+
+.space-y-4 .flex .overflow-hidden:active {
+  background-image: linear-gradient(to right, #e0e7ff 0%, #ffffff 50%, #e0e7ff 100%);
+  box-shadow: inset 0 1px 2px rgba(99, 102, 241, 0.2);
+}
+
+.space-y-4 .flex .overflow-hidden::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #ffffff00, #bfbfbf, #ffffff00);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.space-y-4 .flex .overflow-hidden:hover::before {
+  transform: scaleX(1);
+}
+ 
+
+/* Bottom full */
+.min-h-screen .grid .bottom-full{
+  pointer-events:none;
+ }
+ 
+ @keyframes swipeIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swipeOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.translate-x-0 {
+  animation: swipeIn 0.5s ease-in-out;
+}
+
+.-translate-x-full {
+  animation: swipeOut 0.5s ease-in-out;
+}
+
+
+/* Span Tag */
+.space-y-4 .justify-between span{
+  font-size:19px;
+  line-height:1em;
+ }
+ 
+ /* Justify between */
+ .space-y-4 .flex .justify-between{
+  position:relative;
+  top:3px;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+ }
+ 
+ .min-h-screen .w-full .grid{
+  grid-template-columns:20% 20% 53%;
+ }
+ 
+ .space-y-4 .grid .flex{
+  height:43px;
+ }
+ 
+ /* Font medium */
+.space-y-4 .grid .flex .font-medium{
+  max-width:43px;
+  min-width:43px;
+ }
+
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.text-primary-50 {
+  color: var(--primary-color-50);
+}
+
+.bg-primary-50 {
+  background-color: var(--primary-color-50);
+}
+
+.border-primary-50 {
+  border-color: var(--primary-color-50);
+}
+
+.text-primary-dark {
+  color: var(--primary-color-dark);
+}
+
+.bg-primary-dark {
+  background-color: var(--primary-color-dark);
+}
+
+.border-primary-dark {
+  border-color: var(--primary-color-dark);
+}
+
+/* Add more utility classes as needed */
